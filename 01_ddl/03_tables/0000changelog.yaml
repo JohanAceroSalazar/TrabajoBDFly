@@ -118,3 +118,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/008-flight-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 009-sales-domain
+      author: JohanAceroSalazar
+      labels: HU-11-dev
+      comment: create sales, reservation and ticketing tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/009-sales.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/009-sales-rollback.sql
+            stripComments: false
+            splitStatements: false
