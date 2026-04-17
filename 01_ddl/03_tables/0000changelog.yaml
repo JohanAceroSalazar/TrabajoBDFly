@@ -103,3 +103,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/007-aircraft-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 008-flight-domain
+      author: JohanAceroSalazar
+      labels: HU-10-dev
+      comment: create flight operations tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/008-flight.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/008-flight-rollback.sql
+            stripComments: false
+            splitStatements: false
