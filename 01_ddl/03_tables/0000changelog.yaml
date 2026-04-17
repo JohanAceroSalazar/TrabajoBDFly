@@ -43,3 +43,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/003-identity-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 004-security-domain
+      author: JohanAceroSalazar
+      labels: HU-06-dev
+      comment: create security tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/004-security.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/004-security-rollback.sql
+            stripComments: false
+            splitStatements: false
