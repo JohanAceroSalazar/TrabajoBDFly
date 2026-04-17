@@ -28,3 +28,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/002-airline-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 003-identity-domain
+      author: JohanAceroSalazar
+      labels: HU-05-dev
+      comment: create identity tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/003-identity.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/003-identity-rollback.sql
+            stripComments: false
+            splitStatements: false
