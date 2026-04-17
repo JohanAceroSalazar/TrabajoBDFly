@@ -133,3 +133,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/009-sales-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 010-boarding-domain
+      author: JohanAceroSalazar
+      labels: HU-12-dev
+      comment: create boarding tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/010-boarding.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/010-boarding-rollback.sql
+            stripComments: false
+            splitStatements: false
