@@ -58,3 +58,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/004-security-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 005-customer-domain
+      author: JohanAceroSalazar
+      labels: HU-07-dev
+      comment: create customer tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/005-customer.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/005-customer-rollback.sql
+            stripComments: false
+            splitStatements: false
