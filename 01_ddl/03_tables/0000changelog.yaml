@@ -10,6 +10,21 @@ databaseChangeLog:
             splitStatements: false
       rollback:
         - sqlFile:
-            path: 05_rollbacks/01_ddl/03_tables/001-geography.sql
+            path: 05_rollbacks/01_ddl/03_tables/001-geography-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 002-airline-domain
+      author: JohanAceroSalazar
+      labels: HU-04-dev
+      comment: create airline table
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/002-airline.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/002-airline-rollback.sql
             stripComments: false
             splitStatements: false
