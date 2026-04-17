@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-liquibase-modelado
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Johan2509
+      POSTGRES_DB: Flights
+    ports:
+      - "5436:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  liquibase:
+    image: liquibase/liquibase
+    container_name: liquibase-container-modelado
+    depends_on:
+      - postgres
+    volumes:
+      - ./:/liquibase/changelog
+      - ./postgresql-42.7.9.jar:/liquibase/lib/postgresql.jar
+    working_dir: /liquibase/changelog
+    command: >
+      --url=jdbc:postgresql://postgres:5432/Flights
+      --username=postgres
+      --password=Johan2509
+      --driver=org.postgresql.Driver
+      --changeLogFile=01_tables/00-changelog.yaml
+      update
+
+volumes:
+  postgres_data:
