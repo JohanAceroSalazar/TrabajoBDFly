@@ -1,1 +1,16 @@
-databaseChangeLog: []
+databaseChangeLog:
+  - changeSet:
+      id: 014-create-indexes
+      author: JohanAceroSalazar
+      labels: HU-16-dev
+      comment: creation of database indexes
+      changes:
+        - sqlFile:
+            path: 01_ddl/09_indexes/001-create-indexes.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/09_indexes/001-create-indexes-rollback.sql
+            stripComments: false
+            splitStatements: false
