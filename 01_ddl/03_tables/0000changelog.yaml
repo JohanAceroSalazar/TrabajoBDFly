@@ -148,3 +148,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/010-boarding-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 011-payment-domain
+      author: JohanAceroSalazar
+      labels: HU-13-dev
+      comment: create payment tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/011-payment.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/011-payment-rollback.sql
+            stripComments: false
+            splitStatements: false
