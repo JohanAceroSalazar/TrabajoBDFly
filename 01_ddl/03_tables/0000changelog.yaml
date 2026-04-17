@@ -73,3 +73,18 @@ databaseChangeLog:
             path: 05_rollbacks/01_ddl/03_tables/005-customer-rollback.sql
             stripComments: false
             splitStatements: false
+  - changeSet:
+      id: 006-airport-domain
+      author: JohanAceroSalazar
+      labels: HU-08-dev
+      comment: create airport tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/006-airport.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/006-airport-rollback.sql
+            stripComments: false
+            splitStatements: false
