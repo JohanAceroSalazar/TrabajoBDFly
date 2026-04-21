@@ -1,0 +1,9 @@
+DELETE FROM customer_benefit;
+DELETE FROM miles_transaction;
+DELETE FROM loyalty_account_tier;
+DELETE FROM loyalty_account;
+DELETE FROM customer;
+DELETE FROM loyalty_tier;
+DELETE FROM loyalty_program;
+DELETE FROM benefit_type;
+DELETE FROM customer_category;
