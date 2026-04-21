@@ -1,1 +1,195 @@
-databaseChangeLog: []
+databaseChangeLog:
+  - changeSet:
+      id: 001-geography-domain
+      author: JohanAceroSalazar
+      labels: HU-03-dev
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/001-geography.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/001-geography-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 002-airline-domain
+      author: JohanAceroSalazar
+      labels: HU-04-dev
+      comment: create airline table
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/002-airline.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/002-airline-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 003-identity-domain
+      author: JohanAceroSalazar
+      labels: HU-05-dev
+      comment: create identity tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/003-identity.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/003-identity-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 004-security-domain
+      author: JohanAceroSalazar
+      labels: HU-06-dev
+      comment: create security tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/004-security.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/004-security-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 005-customer-domain
+      author: JohanAceroSalazar
+      labels: HU-07-dev
+      comment: create customer tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/005-customer.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/005-customer-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 006-airport-domain
+      author: JohanAceroSalazar
+      labels: HU-08-dev
+      comment: create airport tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/006-airport.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/006-airport-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 007-aircraft-domain
+      author: JohanAceroSalazar
+      labels: HU-09-dev
+      comment: create aircraft tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/007-aircraft.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/007-aircraft-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 008-flight-domain
+      author: JohanAceroSalazar
+      labels: HU-10-dev
+      comment: create flight operations tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/008-flight.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/008-flight-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 009-sales-domain
+      author: JohanAceroSalazar
+      labels: HU-11-dev
+      comment: create sales, reservation and ticketing tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/009-sales.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/009-sales-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 010-boarding-domain
+      author: JohanAceroSalazar
+      labels: HU-12-dev
+      comment: create boarding tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/010-boarding.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/010-boarding-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 011-payment-domain
+      author: JohanAceroSalazar
+      labels: HU-13-dev
+      comment: create payment tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/011-payment.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/011-payment-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 012-billing-domain
+      author: JohanAceroSalazar
+      labels: HU-14-dev
+      comment: create payment tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/012-billing.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/012-billing-rollback.sql
+            stripComments: false
+            splitStatements: false
+  - changeSet:
+      id: 013-notifications-domain
+      author: JohanAceroSalazar
+      labels: HU-14-dev
+      comment: create notifications tables
+      changes:
+        - sqlFile:
+            path: 01_ddl/03_tables/013-notifications.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/013-notifications-rollback.sql
+            stripComments: false
+            splitStatements: false
