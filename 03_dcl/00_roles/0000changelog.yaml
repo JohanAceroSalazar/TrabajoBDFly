@@ -1,1 +1,16 @@
-databaseChangeLog: []
+databaseChangeLog:
+- changeSet:
+    id: 001-dcl-database-roles
+    author: JohanAceroSalazar
+    labels: HU-dcl-security
+    comment: create database roles and grant privileges
+    changes:
+      - sqlFile:
+          path: 03_dcl/00_roles/001-database-roles.sql
+          stripComments: false
+          splitStatements: false
+    rollback:
+      - sqlFile:
+          path: 05_rollbacks/03_dcl/00_roles/001-database-roles-rollback.sql
+          stripComments: false
+          splitStatements: false
