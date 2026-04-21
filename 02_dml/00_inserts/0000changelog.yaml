@@ -1,1 +1,247 @@
-databaseChangeLog: []
+databaseChangeLog:
+  # ============================================
+  # GEOGRAPHY
+  # ============================================
+  - changeSet:
+      id: 001-insert-geography
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert initial data for geography domain
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/001-insert-geography.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/001-rollback-geography.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # AIRLINE
+  # ============================================
+  - changeSet:
+      id: 002-insert-airline
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert initial data for airline domain
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/002-insert-airline.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/002-rollback-airline.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # IDENTITY
+  # ============================================
+  - changeSet:
+      id: 003-insert-identity
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert initial data for identity domain
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/003-insert-identity.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/003-rollback-identity.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # SECURITY
+  # ============================================
+  - changeSet:
+      id: 004-insert-security
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert roles, permissions and users
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/004-insert-security.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/004-rollback-security.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # CUSTOMER
+  # ============================================
+  - changeSet:
+      id: 005-insert-customer
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert customers and loyalty data
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/005-insert-customer.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/005-rollback-customer.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # AIRPORT
+  # ============================================
+  - changeSet:
+      id: 006-insert-airport
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert airports, terminals and gates
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/006-insert-airport.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/006-rollback-airport.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # AIRCRAFT
+  # ============================================
+  - changeSet:
+      id: 007-insert-aircraft
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert aircraft, cabins and seats
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/007-insert-aircraft.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/007-rollback-aircraft.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # FLIGHT
+  # ============================================
+  - changeSet:
+      id: 008-insert-flight
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert flights and flight segments
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/008-insert-flight.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/008-rollback-flight.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # SALES
+  # ============================================
+  - changeSet:
+      id: 009-insert-sales
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert reservations, sales and tickets
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/009-insert-sales.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/009-rollback-sales.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # BOARDING
+  # ============================================
+  - changeSet:
+      id: 010-insert-boarding
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert check-in and boarding process data
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/010-insert-boarding.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/010-rollback-boarding.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # PAYMENT
+  # ============================================
+  - changeSet:
+      id: 011-insert-payment
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert payment transactions and refunds
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/011-insert-payment.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/011-rollback-payment.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # BILLING
+  # ============================================
+  - changeSet:
+      id: 012-insert-billing
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert invoices, taxes and exchange rates
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/012-insert-billing.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/012-rollback-billing.sql
+            stripComments: false
+            splitStatements: false
+
+  # ============================================
+  # NOTIFICATIONS
+  # ============================================
+  - changeSet:
+      id: 013-insert-notifications
+      author: JohanAceroSalazar
+      labels: HU-dml-seed
+      comment: insert notifications and delivery channels
+      changes:
+        - sqlFile:
+            path: 02_dml/00_inserts/013-insert-notifications.sql
+            stripComments: false
+            splitStatements: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/02_dml/00_inserts/013-rollback-notifications.sql
+            stripComments: false
+            splitStatements: false

@@ -1,0 +1,12 @@
+DELETE FROM baggage;
+DELETE FROM seat_assignment;
+DELETE FROM ticket_segment;
+DELETE FROM ticket;
+DELETE FROM sale;
+DELETE FROM reservation_passenger;
+DELETE FROM reservation;
+DELETE FROM ticket_status;
+DELETE FROM fare;
+DELETE FROM fare_class;
+DELETE FROM sale_channel;
+DELETE FROM reservation_status;
